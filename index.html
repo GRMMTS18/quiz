@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Estrutura Web</title>
+    <!-- Carregamento do Tailwind CSS para utilitários de terceiros (como Chart.js) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carregamento da biblioteca Chart.js para o gráfico de desempenho -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <!-- Link para os estilos personalizados -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!-- Classe semântica para centralizar e estilizar o corpo -->
+<body class="quiz-body">
+
+    <!-- Painel principal do Quiz -->
+    <div id="quiz-container" class="quiz-panel">
+        <h1 class="quiz-title">
+            Quiz de Estrutura Web
+        </h1>
+
+        <!-- Tela de Início: Solicita o nome do usuário -->
+        <div id="start-screen">
+            <p class="quiz-description">
+                Teste seus conhecimentos em HTML, CSS e JavaScript. Mínimo de 15 questões.
+            </p>
+            <label for="userName" class="label-text">Seu Nome:</label>
+            <input type="text" id="userName" placeholder="Digite seu nome para começar" class="input-field">
+            <!-- Adicionado 'button-base' -->
+            <button id="startButton" disabled class="button-base button-start button-disabled">
+                Começar o Quiz
+            </button>
+        </div>
+
+        <!-- Tela do Quiz: Exibe Perguntas e Opções -->
+        <div id="quiz-screen" class="hidden">
+            <p id="progress-text" class="progress-text-style"></p>
+
+            <div class="question-box">
+                <p id="question-text" class="question-text-style"></p>
+            </div>
+
+            <div id="options-container" class="options-container-style">
+                <!-- Opções serão injetadas aqui pelo JavaScript -->
+            </div>
+
+            <!-- Adicionado 'button-base' -->
+            <button id="nextButton" disabled class="button-base button-next button-disabled">
+                Avançar (Selecione uma opção)
+            </button>
+        </div>
+
+        <!-- Tela de Resultados: Exibe Score e Gráfico -->
+        <div id="result-screen" class="hidden result-screen-style">
+            <h2 class="result-title">
+                Resultado do Quiz
+            </h2>
+            <div id="user-info" class="user-info-box">
+                <!-- Nome do usuário será injetado aqui -->
+            </div>
+            
+            <!-- Resumo de Desempenho -->
+            <div class="summary-box">
+                <p class="summary-item">✅ Acertos: <span id="correct-count" class="correct-count-style"></span></p>
+                <p class="summary-item">❌ Erros: <span id="error-count" class="error-count-style"></span></p>
+                <p class="summary-item">📊 Aproveitamento: <span id="percentage" class="percentage-style"></span></p>
+            </div>
+            
+            <!-- Mensagem de Desempenho -->
+            <div id="performance-message" class="performance-message-base">
+                <!-- Mensagem será injetada aqui -->
+            </div>
+
+            <!-- Gráfico de Desempenho -->
+            <h3 class="chart-title">Gráfico de Acertos vs. Erros</h3>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+            
+            <!-- Adicionado 'button-base' -->
+            <button id="restartButton" class="button-base button-restart">
+                Recomeçar o Quiz
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Link para o arquivo de lógica -->
+    <script src="./script.js"></script>
+</body>
+</html>
+
