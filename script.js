@@ -45,12 +45,12 @@ const questions = [
     {
         question: "Qual tag HTML é semanticamente correta para agrupar o conteúdo de navegação de um site?",
         options: ["<sections>", "<menu>", "<nav>", "<footer>"],
-        correctAnswer: 2 // <nav>
+        correctAnswer: 2 
     },
     {
         question: "Em JavaScript, o que o operador '===' verifica?",
         options: ["Igualdade de valor apenas", "Igualdade de tipo apenas", "Igualdade de valor e tipo", "Atribuição de valor"],
-        correctAnswer: 2 // Igualdade de valor e tipo (Strict Equality)
+        correctAnswer: 2 // Igualdade de valor e tipo 
     },
     {
         question: "Para que serve a propriedade 'display: flex;' no CSS?",
@@ -60,17 +60,17 @@ const questions = [
     {
         question: "Qual é o nome do mecanismo assíncrono padrão do JavaScript usado para lidar com operações futuras (como requisições HTTP)?",
         options: ["Callback", "Event Loop", "Promise", "Thread"],
-        correctAnswer: 2 // Promise
+        correctAnswer: 2 
     },
     {
         question: "Qual atributo HTML deve ser usado para abrir um link em uma nova aba do navegador?",
         options: ["target='_self'", "target='_top'", "target='_parent'", "target='_blank'"],
-        correctAnswer: 3 // target='_blank'
+        correctAnswer: 3 
     },
     {
         question: "Qual unidade de medida CSS é relativa à altura da viewport?",
         options: ["vw", "em", "rem", "vh"],
-        correctAnswer: 3 // vh
+        correctAnswer: 3 
     },
     {
         question: "Qual método de array JavaScript é usado para adicionar um ou mais elementos ao *final* de um array e retornar o novo comprimento?",
@@ -80,12 +80,12 @@ const questions = [
     {
         question: "Qual é a sintaxe correta para um comentário de uma única linha em JavaScript?",
         options: ["<!-- Comentário -->", "// Comentário", "/* Comentário */", "# Comentário"],
-        correctAnswer: 1 // // Comentário
+        correctAnswer: 1 
     },
     {
         question: "Qual termo é usado para descrever o processo de converter um objeto JavaScript em uma string JSON?",
         options: ["JSON.parse()", "JSON.stringify()", "Object.serialize()", "String.convert()"],
-        correctAnswer: 1 // JSON.stringify()
+        correctAnswer: 1 
     }
 ];
 
